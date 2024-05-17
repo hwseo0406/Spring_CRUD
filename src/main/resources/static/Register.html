@@ -1,0 +1,86 @@
+<html>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap">
+	<style>
+	    * {
+	        font-family: 'Noto Sans KR', sans-serif;
+	    }
+
+	    body {
+	        background-color: #1BBC9B;
+	        margin: 0;
+	        display: flex;
+	        justify-content: center;
+	        align-items: center;
+	        height: 100vh;
+	    }
+
+	    .container {
+	        width: 300px;
+	        background-color: #EEEFF1;
+	        border-radius: 5px;
+	        text-align: center;
+	        padding: 20px;
+	    }
+
+	    input {
+	        width: calc(100% - 20px);
+	        padding: 10px;
+	        box-sizing: border-box;
+	        border-radius: 5px;
+	        border: none;
+	        margin-bottom: 10px;
+	    }
+
+	    button {
+	        width: calc(100% - 20px);
+	        padding: 10px;
+	        box-sizing: border-box;
+	        border-radius: 5px;
+	        border: none;
+	        background-color: #1BBC9B;
+	        color: white;
+	        margin-bottom: 10px;
+	        cursor: pointer;
+	    }
+		
+		#del_button {
+		    width: calc(100% - 20px);
+		    padding: 10px;
+		    box-sizing: border-box;
+		    border-radius: 5px;
+		    border: none;
+		    background-color: rgb(255, 0, 0);
+		    color: white;
+		    margin-bottom: 10px;
+		    cursor: pointer;
+		}
+
+	    a {
+	        text-decoration: none;
+	        color: #9B9B9B;
+	        font-size: 12px;
+	    }
+	</style>
+   <form action="/register" method="post">
+     <div class="container">
+       <label for="uname"><b>Username</b></label>
+       <input type="text" placeholder="Enter Username" name="User_Name" required>
+   
+       <label for="psw"><b>Age</b></label>
+       <input type="text" placeholder="Enter Userage" name="User_Age" required>
+   
+         <button type="submit">Send User Info</button>
+     </div>
+   </form>
+    <form action="/delete" method="get">
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="User_Name" required>
+
+            <label for="psw"><b>Age</b></label>
+            <input type="text" placeholder="Enter Userage" name="User_Age" required>
+
+            <button type="submit" id="del_button">Delete User Info</button>
+        </div>
+    </form>
+</html>

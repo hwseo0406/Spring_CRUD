@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- 타임리프를 사용하기 위한 태그 선언 -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <!-- 내부 css -->
+  <style>
+
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+
+  </style>
+
+  <!-- 내부 js -->
+  <script>
+    window.onload = function() {
+      console.log("");
+      console.log("[window onload] : [start]");
+      console.log("");
+    };
+  </script>
+
+</head>
+
+<body>
+
+<!-- 테이블 선언 실시 -->
+<table>
+
+  <thead>
+  <tr>
+    <th>번호</th>
+    <th>이름</th>
+    <th>나이</th>
+  </tr>
+  </thead>
+<!--  <tr th:if="${tableList.empty}">-->
+<!--  	 <td colspan="4">No User</td>-->
+<!--  </tr>-->
+  <tr th:each="list : ${tableList}">
+    <td><span th:text="${list.id}"></span></td>
+    <td><span th:text="${list.username}"></span></td>
+    <td><span th:text="${list.userage}"></span></td>
+  </tr>
+  <tbody>
+  </tbody>
+</table>
+<form action="Logout" method="get">
+	<button type="submit"> 로그아웃 </button>
+</form>
+</body>
+
+</html>
